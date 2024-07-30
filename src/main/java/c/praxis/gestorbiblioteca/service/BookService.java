@@ -11,4 +11,6 @@ public interface BookService {
     boolean create(Book book);
     boolean update(Book book);
     boolean delete(int id);
+    List<Book> search (String query);
+    List<Book> findAvailableBooks();
 }

@@ -1,29 +1,42 @@
 package c.praxis.gestorbiblioteca.model.dto;
 
 public class Book {
-    private int id;
+    private int idBook;
     private String isbn;
     private String title;
     private int autorId;
+    private Author author;
     private String extract;
+    private boolean available;
 
     public Book() {
     }
 
-    public Book(int id, String isbn, String title, int autorId, String extract) {
-        this.id = id;
+    public Book(int idBook, String isbn, String title, int autorId, String extract, boolean available) {
+        this.idBook = idBook;
         this.isbn = isbn;
         this.title = title;
         this.autorId = autorId;
         this.extract = extract;
+        this.available = available;
     }
 
-    public int getId() {
-        return id;
+    public Book(int idBook, String isbn, String title, int autorId, Author author, String extract, boolean available) {
+        this.idBook = idBook;
+        this.isbn = isbn;
+        this.title = title;
+        this.autorId = autorId;
+        this.author = author;
+        this.extract = extract;
+        this.available = available;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getIdBook() {
+        return idBook;
+    }
+
+    public void setIdBook(int idBook) {
+        this.idBook = idBook;
     }
 
     public String getIsbn() {
@@ -56,5 +69,20 @@ public class Book {
 
     public void setExtract(String extract) {
         this.extract = extract;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }
